@@ -1,0 +1,30 @@
+<header>
+    <div class="layout-container" (window:resize)="onResize($event)">
+        <button class="mobile-nav-toggle hamburger hamburger--squeeze" (click)="clickNavButton()">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+            <span class="hamburger-label">Menu</span>
+        </button>
+        <a href="#" class="logo">Angular Calendar App</a>
+        <nav>
+            <ul>
+                <li><a href="#" routerLink="/" (click)="clickLink()">Home</a></li>
+                <li><a href="#" routerLink="/signup" (click)="clickLink()">Signup</a></li>
+                <li><a href="#" routerLink="/login" (click)="clickLink()">Login</a></li>
+                <li><a href="#" routerLink="/calendar" (click)="clickLink()">Calendar</a></li>
+                <li><a href="#" routerLink="/settings" (click)="clickLink()">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<footer>
+    <div class="layout-container">
+        <p>Angular Calendar App &copy; 2020</p>
+    </div>
+</footer>
